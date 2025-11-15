@@ -22,6 +22,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#leadership">Leadership</a></li>
         <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#stories">Stories</a></li>
         <li><a href="#transparency">Transparency</a></li>
         <li><a href="#join">Join</a></li>
         <li><a href="#donate">Donate</a></li>
@@ -53,7 +54,7 @@
         </div>
         <div class="hero-stat">
           <div class="hero-stat-icon">🏡</div>
-          <div><span>Community development</span><br />Cleaning campaigns, education support, youth empowerment and more.</div>
+          <div><span>Community development</span><br />Current focus on teachers’ quarters to support education in the village.</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-icon">📊</div>
@@ -100,28 +101,38 @@
     <div class="section-inner">
       <h2>Our Projects</h2>
       <p class="section-intro">
-        Through our monthly contributions and volunteer work, we run small but impactful projects that respond to the needs of Hella Kunda.
+        Through our monthly contributions and volunteer work, we support projects that make life better in Hella Kunda. Below is our current main project and plans for the near future.
       </p>
       <div class="grid grid-3">
+        <!-- ONGOING PROJECT -->
         <article class="card">
-          <span class="chip">Ongoing</span>
-          <h3>Monthly Village Cleaning</h3>
+          <span class="chip chip-ongoing">Ongoing</span>
+          <h3>Teachers’ Quarters Project</h3>
           <p>
-            Every last Saturday of the month, HKYDA mobilises youth and community members to clean public areas, schools, compounds and streets.
+            HKYDA is currently working on building simple, safe accommodation rooms for teachers serving in Hella Kunda. By providing a place to stay, we hope to attract and retain committed teachers for our children.
           </p>
+          <ul class="lead-list">
+            <li>Goal: build basic teachers’ quarters in the village.</li>
+            <li>Funded mainly through members’ monthly contributions.</li>
+            <li>Progress: update this text as work continues (e.g. foundation completed, materials purchased, etc.).</li>
+          </ul>
         </article>
+
+        <!-- PLANNED PROJECT 1 -->
         <article class="card">
-          <span class="chip">Ongoing</span>
+          <span class="chip chip-planned">Planned</span>
           <h3>Education Support Fund</h3>
           <p>
-            Part of our monthly contributions goes to supporting students with learning materials, exam fees and other basic needs.
+            A planned fund to support needy students with learning materials, exam fees and other basic school needs. This project will start as contributions increase and the teachers’ quarters project moves forward.
           </p>
         </article>
+
+        <!-- PLANNED PROJECT 2 -->
         <article class="card">
-          <span class="chip">Growing</span>
+          <span class="chip chip-planned">Planned</span>
           <h3>Youth Skills &amp; Empowerment</h3>
           <p>
-            We organise talks and small trainings on topics such as entrepreneurship, agriculture, leadership and personal development.
+            Planned trainings and talks on entrepreneurship, agriculture, leadership and personal development for youth in Hella Kunda and the diaspora.
           </p>
         </article>
       </div>
@@ -183,6 +194,39 @@
     </div>
   </section>
 
+  <!-- WHO WE HELPED -->
+  <section id="stories" class="section">
+    <div class="section-inner">
+      <h2>Who We Helped</h2>
+      <p class="section-intro">
+        These are example ways HKYDA aims to support the community. Replace these with real stories as your work continues.
+      </p>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Supporting education</h3>
+          <p>
+            HKYDA plans to support students from low-income families with learning materials and exam fees so they can stay in school.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Better conditions for teachers</h3>
+          <p>
+            Through the teachers’ quarters project, we aim to provide accommodation so teachers can live comfortably in the village and focus on teaching.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Youth empowerment</h3>
+          <p>
+            Planned trainings, mentoring and events will help youth build skills, confidence and stronger links with the diaspora community.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- TRANSPARENCY -->
   <section id="transparency" class="section">
     <div class="section-inner">
@@ -191,10 +235,10 @@
         Transparency is one of our core values. Members can see the list of registered members and the status of monthly contributions for 2025.
       </p>
 
-      <!-- Tables + badges CSS lives in style.css, but we keep classes here -->
+      <h3>Members List (Alphabetical Order)</h3>
+      <p>Below is the official list of registered HKYDA members.</p>
+
       <div class="table-box">
-        <h3>Members List (Alphabetical Order)</h3>
-        <p>Below is the official list of registered HKYDA members.</p>
         <table class="clean-table">
           <thead>
             <tr>
@@ -292,6 +336,14 @@
         </table>
       </div>
 
+      <div class="trans-summary highlight-box">
+        <strong>2025 monthly totals (GMD) – update manually:</strong>
+        <p style="margin-top:6px;">
+          Jan: ___ • Feb: ___ • Mar: ___ • Apr: ___ • May: ___ • Jun: ___<br>
+          Jul: ___ • Aug: ___ • Sep: ___ • Oct: ___ • Nov: ___ • Dec: ___
+        </p>
+      </div>
+
       <script>
         (function() {
           const yearSelect = document.getElementById('yearSelect');
@@ -314,6 +366,7 @@
           }
         })();
       </script>
+
       <p class="note">
         When a member pays, you can replace "-" with a badge like
         <span class="status-badge status-paid">Paid</span>,
@@ -367,6 +420,39 @@
         <div class="highlight-box">
           HKYDA will always provide basic reporting to donors and members – including how much was received and how it was used. Transparency is central to our work.
         </div>
+
+        <div class="donation-tools">
+          <h3 style="margin-top:14px;">Contribution calculator</h3>
+          <p style="font-size:0.9rem;">
+            See what your monthly contributions can achieve. Enter your contribution and number of members.
+          </p>
+          <form class="donation-form" onsubmit="event.preventDefault(); calculateContributionTotal();">
+            <label>Monthly contribution per member (GMD)</label>
+            <input id="contribPerMember" type="number" min="0" step="1" required>
+
+            <label>Number of contributing members</label>
+            <input id="contribMembers" type="number" min="0" step="1" required>
+
+            <label>Number of months</label>
+            <input id="contribMonths" type="number" min="1" step="1" value="12" required>
+
+            <button type="submit">Calculate total</button>
+          </form>
+          <div id="donationResult" class="donation-result">
+            Total = 0 GMD
+          </div>
+        </div>
+
+        <script>
+          function calculateContributionTotal() {
+            const perMember = parseFloat(document.getElementById('contribPerMember').value) || 0;
+            const members = parseFloat(document.getElementById('contribMembers').value) || 0;
+            const months = parseFloat(document.getElementById('contribMonths').value) || 0;
+            const total = perMember * members * months;
+            const resultBox = document.getElementById('donationResult');
+            resultBox.textContent = "Total = " + total.toLocaleString("en-US") + " GMD";
+          }
+        </script>
       </div>
     </div>
   </section>
@@ -387,9 +473,21 @@
         </ul>
       </div>
       <div>
-        <h3>Contact Form</h3>
-        <p style="font-size:0.9rem;">
-          For now we recommend using WhatsApp or email. Later you can add an online contact form.
+        <h3>Send us a message</h3>
+        <form class="contact-form" action="mailto:info@hellakundayouth.org" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Send message</button>
+        </form>
+        <p class="note">
+          If the form does not work on your device, please send a WhatsApp message or email us directly using the contact details on the left.
         </p>
       </div>
     </div>
