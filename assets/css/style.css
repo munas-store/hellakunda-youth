@@ -650,3 +650,58 @@ footer {
   color: #991b1b;
   font-weight: 600;
 }
+/* --- Payment Table Small + Clean --- */
+
+.payment-table {
+  font-size: 13px;              /* smaller text */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.payment-table th,
+.payment-table td {
+  padding: 6px 4px;             /* smaller padding */
+  text-align: center;
+  border: 1px solid #eee;
+  white-space: nowrap;
+}
+
+.payment-table th {
+  background: #f97316;          /* orange header */
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.payment-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Paid + Unpaid colors */
+.paid-cell {
+  background-color: #d1fadf;   /* softer green */
+  color: #166534;
+  font-weight: 600;
+}
+
+.unpaid-cell {
+  background-color: #fee2e2;   /* softer red */
+  color: #991b1b;
+  font-weight: 600;
+}
+
+/* Mobile improvements */
+@media (max-width: 600px) {
+  .payment-table {
+    font-size: 11px;
+  }
+
+  .payment-table th,
+  .payment-table td {
+    padding: 4px 2px;
+  }
+}
