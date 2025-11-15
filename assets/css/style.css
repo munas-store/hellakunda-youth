@@ -638,3 +638,15 @@ footer {
   color: #991b1b;
   font-weight: 600;
 }
+/* Payment table colours */
+.payment-table .paid-cell {
+  background-color: #dcfce7; /* light green */
+  color: #166534;
+  font-weight: 600;
+}
+
+.payment-table .unpaid-cell {
+  background-color: #fee2e2; /* light red */
+  color: #991b1b;
+  font-weight: 600;
+}
