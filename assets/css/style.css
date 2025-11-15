@@ -37,6 +37,9 @@ header {
 }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 0.03em;
@@ -237,11 +240,19 @@ nav a:hover {
   display: inline-flex;
   padding: 2px 8px;
   border-radius: 999px;
-  background: #fee2e2;
-  color: #b91c1c;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.chip-ongoing {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.chip-planned {
+  background: #fef9c3;
+  color: #92400e;
 }
 
 /* TWO COLUMN LAYOUT */
@@ -447,6 +458,88 @@ table.clean-table tr:hover {
 .note {
   font-size: 0.85rem;
   color:#4b5563;
+}
+
+/* DONATION CALCULATOR */
+
+.donation-tools {
+  margin-top: 14px;
+}
+
+.donation-form {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.donation-form label {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.donation-form input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+.donation-form button {
+  margin-top: 4px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #f97316;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.donation-form button:hover {
+  background: #ea580c;
+}
+
+.donation-result {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #b45309;
+  font-size: 0.9rem;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+  display: grid;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.contact-form label {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+.contact-form button {
+  margin-top: 4px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #f97316;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #ea580c;
 }
 
 /* FOOTER */
