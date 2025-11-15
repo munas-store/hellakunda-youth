@@ -579,3 +579,50 @@ footer {
     display: none; /* simple: hide menu on very small screens */
   }
 }
+/* CONTRIBUTIONS TABLE (COLOURS + TOTALS) */
+
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.payment-table th,
+.payment-table td {
+  padding: 6px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.payment-table th {
+  background: #f97316;
+  color: #ffffff;
+}
+
+.payment-table tr:nth-child(even) tbody {
+  background: #f9fafb;
+}
+
+.paid-cell {
+  background-color: #dcfce7; /* light green */
+  color: #166534;
+  font-weight: 600;
+}
+
+.unpaid-cell {
+  background-color: #fee2e2; /* light red */
+  color: #991b1b;
+  font-weight: 600;
+}
+
+.total-col {
+  background-color: #fffbeb;
+  font-weight: 700;
+  color: #92400e;
+}
+
+.month-total-row td {
+  font-weight: 700;
+  background-color: #f3f4f6;
+  color: #111827;
+}
