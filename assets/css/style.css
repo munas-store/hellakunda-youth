@@ -705,3 +705,33 @@ footer {
     padding: 4px 2px;
   }
 }
+/* Payment table sizing & totals */
+.payment-table {
+  font-size: 13px;          /* smaller text */
+  border-collapse: collapse;
+}
+
+.payment-table th,
+.payment-table td {
+  padding: 4px 6px;         /* smaller cell height/width */
+}
+
+/* already added earlier, keep these if they exist */
+.payment-table .paid-cell {
+  background-color: #dcfce7;
+  color: #166534;
+  font-weight: 600;
+}
+
+.payment-table .unpaid-cell {
+  background-color: #fee2e2;
+  color: #991b1b;
+  font-weight: 600;
+}
+
+/* new: totals column style */
+.payment-table .total-cell {
+  background-color: #fff7d6;  /* light yellow */
+  font-weight: 700;
+  text-align: right;
+}
