@@ -735,3 +735,30 @@ footer {
   font-weight: 700;
   text-align: right;
 }
+.year-table { overflow-x: auto; }
+
+.clean-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;              /* smaller */
+}
+
+.clean-table th,
+.clean-table td {
+  padding: 6px 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.clean-table td:first-child,
+.clean-table th:first-child {
+  text-align: left;
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 2;
+}
+
+/* your paid/unpaid colors */
+.payment-table .paid-cell { background: #dcfce7; color: #166534; font-weight: 600; }
+.payment-table .unpaid-cell { background: #fee2e2; color: #991b1b; font-weight: 600; }
