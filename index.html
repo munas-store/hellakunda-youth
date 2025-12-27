@@ -809,10 +809,10 @@
   </p>
 </footer>
 <script>
-  // Set meeting date (TOMORROW at 10:00 AM – change time if needed)
-  const meetingDate = new Date();
-  meetingDate.setDate(meetingDate.getDate() + 1);
-  meetingDate.setHours(10, 0, 0, 0); // 10:00 AM
+  <script>
+  // Meeting date: 28 December 2025 at 21:00 (9:00 PM)
+  const meetingDate = new Date(2025, 11, 28, 21, 0, 0);
+  // Month note: January = 0, December = 11
 
   function updateCountdown() {
     const now = new Date();
@@ -826,12 +826,13 @@
       return;
     }
 
-    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
 
     timer.textContent =
-      hours + "h " + minutes + "m " + seconds + "s";
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
   }
 
   updateCountdown();
