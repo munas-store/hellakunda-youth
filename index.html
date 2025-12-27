@@ -19,6 +19,10 @@
 <body>
 
 <header>
+  <div id="meeting-countdown" class="countdown-box">
+  <strong>📅 Meeting starts in:</strong>
+  <span id="countdown-timer">Loading...</span>
+</div>
   <div class="nav-container">
     <div class="logo">
       HKYDA
@@ -804,6 +808,34 @@
     <a href="/terms.html">Terms of Use</a>
   </p>
 </footer>
+<script>
+  // Set meeting date (TOMORROW at 10:00 AM – change time if needed)
+  const meetingDate = new Date();
+  meetingDate.setDate(meetingDate.getDate() + 1);
+  meetingDate.setHours(10, 0, 0, 0); // 10:00 AM
 
+  function updateCountdown() {
+    const now = new Date();
+    const diff = meetingDate - now;
+
+    const timer = document.getElementById("countdown-timer");
+    if (!timer) return;
+
+    if (diff <= 0) {
+      timer.textContent = "Meeting is happening now 🎉";
+      return;
+    }
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    timer.textContent =
+      hours + "h " + minutes + "m " + seconds + "s";
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
