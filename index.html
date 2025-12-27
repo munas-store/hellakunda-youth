@@ -809,16 +809,15 @@
   </p>
 </footer>
 <script>
-  <script>
-  // Meeting date: 28 December 2025 at 21:00 (9:00 PM)
+ // Meeting: 28 December 2025 at 21:00 (9:00 PM)
+  // NOTE: Month is 11 because January = 0
   const meetingDate = new Date(2025, 11, 28, 21, 0, 0);
-  // Month note: January = 0, December = 11
 
   function updateCountdown() {
     const now = new Date();
     const diff = meetingDate - now;
-
     const timer = document.getElementById("countdown-timer");
+
     if (!timer) return;
 
     if (diff <= 0) {
@@ -831,8 +830,7 @@
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
 
-    timer.textContent =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    timer.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
 
   updateCountdown();
