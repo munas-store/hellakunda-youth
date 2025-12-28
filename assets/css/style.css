@@ -754,3 +754,12 @@ footer {
 .spending-cell {
   color: #0f766e;
 }
+.spending-row {
+  background: #ecfeff;
+  font-weight: 700;
+}
+
+.spending-cell {
+  color: #0f766e;
+  text-align: center;
+}
